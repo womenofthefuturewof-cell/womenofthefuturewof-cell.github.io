@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women of the Future – Racines dans la terre, regard vers l’avenir</title>
+<img src="logo.jpg" alt="Logo WOF" style="height:80px; margin-bottom:10px;">
+  <style>
+    :root{
+      --green:#1f5f3b;
+      --ocre:#d18b2c;
+      --dark:#0f2f22;
+      --light:#f5f3ef;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: "Segoe UI", sans-serif;
+      background: var(--light);
+      color:#222;
+      line-height:1.6;
+    }
+
+    header{
+      background: linear-gradient(120deg,var(--green),var(--dark));
+      color:white;
+      padding:4rem 2rem;
+      position:relative;
+      overflow:hidden;
+    }
+
+    header::after{
+      content:"";
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:var(--ocre);
+      border-radius:50%;
+      opacity:.15;
+      top:-80px;
+      right:-80px;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-bottom:2rem;
+      font-weight:600;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      opacity:.85;
+    }
+    nav a:hover{opacity:1}
+
+    h1{
+      font-size:2.6rem;
+      margin-bottom:1rem;
+    }
+
+    .slogan{
+      font-size:1.2rem;
+      font-weight:600;
+      color:var(--ocre);
+      margin-bottom:1.5rem;
+    }
+
+    section{
+      padding:4rem 2rem;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    section h2{
+      color:var(--green);
+      margin-bottom:1rem;
+      font-size:2rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    }
+
+    .card{
+      background:white;
+      padding:1.5rem;
+      border-radius:16px;
+      box-shadow:0 10px 25px rgba(0,0,0,.06);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .tag{
+      display:inline-block;
+      background:var(--ocre);
+      color:white;
+      padding:.3rem .7rem;
+      border-radius:20px;
+      font-size:.8rem;
+      margin-bottom:.6rem;
+    }
+
+    footer{
+      background:var(--dark);
+      color:white;
+      padding:3rem 2rem;
+      text-align:center;
+    }
+
+    footer a{
+      color:var(--ocre);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .accent{
+      color:var(--ocre);
+      font-weight:600;
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="accueil">
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#actions">Actions</a>
+    <a href="#rejoindre">Rejoindre WOF</a>
+    <a href="#partenaires">Partenaires</a>
+    <a href="#actualites">Actualités</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <h1>WOMEN OF THE FUTURE (WOF)</h1>
+  <div class="slogan">Racines dans la terre, regard vers l’avenir</div>
+
+  <p>
+    Association féminine engagée pour un développement durable, inclusif
+    et porté par les femmes située dans la Région Boeny, Madagascar.
+  </p>
+</header>
+
+<section id="apropos">
+  <h2>Qui sommes-nous</h2>
+  <p>
+    Women of the Future (WOF) est une association féminine engagée pour un
+    développement durable, inclusif et porté par les femmes.
+  </p>
+  <p>
+    Elle agit principalement en milieu rural, tout en développant des actions
+    ciblées en milieu urbain, afin de toucher un public plus large et de renforcer son impact.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Mission</span>
+      <p>
+        Contribuer à un développement durable porté par les femmes à travers
+        le leadership féminin, l’autonomisation économique, la protection de
+        l’environnement, l’inclusion des femmes vulnérables et des actions
+        humanitaires.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Vision</span>
+      <p>
+        Un avenir où les femmes participent pleinement aux décisions,
+        où les jeunes filles grandissent avec confiance et où le
+        développement respecte les générations futures.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Valeurs</span>
+      <p>
+        Autonomie – Engagement – Inclusion – Audace – Responsabilité.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="actions">
+  <h2>Actions & Projets</h2>
+  <p>
+    Nos actions sont pensées pour être utiles, réalistes et durables,
+    en réponse aux réalités locales.
+  </p>
+
+  <div class="grid">
+    <div class="card">Leadership féminin & développement personnel</div>
+    <div class="card">Entrepreneuriat féminin</div>
+    <div class="card">Gestion de projets communautaires</div>
+    <div class="card">Mobilisation communautaire</div>
+    <div class="card">Protection de l’environnement</div>
+    <div class="card">Actions humanitaires ciblées</div>
+  </div>
+</section>
+
+<section id="rejoindre">
+  <h2>Rejoindre Women of the Future</h2>
+
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Membres actifs</span>
+      <p>Femmes de 18 ans et plus, engagées volontairement.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Membres juniors</span>
+      <p>
+        Jeunes filles de 12 à 17 ans, participation encadrée
+        dans un cadre sûr et bienveillant.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Partenaires solidaires</span>
+      <p>Personnes ou structures souhaitant soutenir les actions.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Membres d’honneur</span>
+      <p>Personnes souhaitant valoriser et soutenir WOF.</p>
+    </div>
+  </div>
+</section>
+
+<section id="partenaires">
+  <h2>Partenaires & Bailleurs</h2>
+  <p>
+    Women of the Future est ouverte aux collaborations avec des
+    partenaires partageant les mêmes valeurs et souhaitant avoir
+    un impact réel sur le terrain.
+  </p>
+  <p class="accent">
+    📧 Contact partenaires uniquement :  
+    womenofthefuturewof@gmail.com
+  </p>
+</section>
+
+<section id="actualites">
+  <h2>Actualités</h2>
+  <p>
+    Cette section accueillera nos annonces, projets, événements
+    et communications officielles.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Nous contacter</h2>
+  <p>
+    📧 womenofthefuturewof@gmail.com<br/>
+    📩 Message privé sur notre page Facebook
+  </p>
+</section>
+
+<footer>
+<p>Mahajanga , Boeny, Madagascar</p>
+  <p>
+    © Women of the Future – WOF  
+    <br/>Racines dans la terre, regard vers l’avenir
+  </p>
+</footer>
+
+</body>
+</html>
