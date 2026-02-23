@@ -79,6 +79,66 @@
       padding:2rem;
       text-align:center;
     }
+   /* ===== SLIDER WOF ===== */
+
+.slider {
+  position: relative;
+  max-width: 700px;
+  margin: 1.5rem auto;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Cache toutes les images */
+.slider .slide {
+  display: none;
+}
+
+/* Affiche seulement l’image active */
+.slider .slide.active {
+  display: block;
+}
+
+/* Boutons */
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.slider button:hover {
+  background: rgba(31, 95, 59, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider .prev {
+  left: 12px;
+}
+
+.slider .next {
+  right: 12px;
+}
+.slider video {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
   </style>
 </head>
 
@@ -91,6 +151,343 @@
 <section>
 
   <!-- ACTUALITÉ RÉCENTE -->
+  <article>
+  <h2>“Fanambadiana aloha loatra : TSIA ; Hoavy mamiratra : OK”</h2>
+  <div class="date">09 Février 2026 – Lycée Joël Sylvain, Ambalavao</div>
+
+  <div class="slider" id="slider1">
+  <img src="ljsa2-1.jpg" class="slide active" alt="Image 1">
+  <img src="ljsa2-2.jpg" class="slide" alt="Image 2">
+  <img src="ljsa2-3.jpg" class="slide" alt="Image 3">
+
+  <button class="prev" onclick="prevSlide('slider1')">❮</button>
+  <button class="next" onclick="nextSlide('slider1')">❯</button>
+</div>
+  
+
+  <p>
+    Le 11 février 2026, Women of the Future est intervenue au Lycée Joël Sylvain d’Ambalavao,
+    dans cinq salles de classe, pour échanger avec 326 jeunes sur le thème du mariage d’enfants.
+  </p>
+
+  <p>
+    Les discussions ont porté sur les causes du mariage précoce ainsi que sur ses conséquences sur
+    la santé, l’éducation et l’avenir des jeunes.
+  </p>
+
+  <p>
+    Au cours de la séance, les élèves ont activement participé aux échanges, débattu et proposé
+    leurs propres solutions pour contribuer à la prévention du mariage d’enfants.
+  </p>
+
+  <p>
+    À la fin de l’activité, ils ont exprimé un engagement collectif affirmant leur position en
+    faveur de l’éducation et de la poursuite de leurs objectifs, à travers le cri collectif :
+  </p>
+
+  <p>
+    <strong>
+      “Fanambadiana aloha loatra : TSIA ; Hoavy mamiratra : OK”
+    </strong><br>
+    (Mariage précoce : NON ; Un avenir brillant : OUI)
+  </p>
+
+  <p>
+    Cette initiative s’inscrit dans le cadre de la campagne « 100 jours sans mariage d’enfants »
+    et dans l’engagement de Women of the Future en faveur de la protection de l’enfance
+    et du droit à l’éducation.
+  </p>
+</article>
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">09 Février 2026 – Lycée Joël Sylvain, Ambalavao</div>
+
+  <img src="ljsa-1-1.jpg" alt="Action de sensibilisation au Lycée Joël Sylvain Ambalavao">
+  <p>
+    Nouvelle séance de sensibilisation au Lycée Joël Sylvain avec 300 élèves.
+  </p>
+
+  <p>
+    Au cours de la discussion, les bénévoles ont interrogé les élèves sur leur connaissance
+    de leurs droits en tant qu’enfants, ainsi que sur leurs rêves et projets pour leur vie
+    et leur avenir.
+  </p>
+
+  <p>
+    Ces échanges ont permis d’amener les jeunes à réfléchir aux conséquences du mariage
+    précoce sur leur parcours scolaire et personnel. L’accent a été mis sur l’impact que
+    cette pratique peut avoir sur la poursuite des études, la réalisation des projets
+    et la construction d’un avenir autonome.
+  </p>
+
+  <p>
+    La séance a suscité un moment de silence et de réflexion parmi les élèves, témoignant
+    de l’attention portée aux messages partagés et de la prise de conscience engagée
+    au cours de l’activité.
+  </p>
+
+  <p>
+    Cette initiative s’inscrit dans la continuité des actions de Women of the Future
+    dans le cadre de la campagne « 100 jours sans mariage d’enfants », visant à renforcer
+    la sensibilisation et l’engagement des jeunes en faveur de leur éducation et de leurs droits.
+  </p>
+
+  <p>
+    Women of the Future adresse ses sincères remerciements au Proviseur du Lycée Joël Sylvain,
+    aux surveillants, aux enseignants, ainsi qu’aux bénévoles mobilisés pour la réussite
+    de cette activité.
+  </p>
+</article>
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">04 Février 2026 – Lycée Technique et Professionnel d’Ambalavao</div>
+
+   <img src="lpta1.jpg" alt="Sensibilisation au Lycée Technique et Professionnel d'Ambalavao">
+
+"Séance de sensibilisation au LPT Ambalavao – 04 février 2026"
+
+  <p>
+    L’avenir des jeunes se construit aujourd’hui. C’est dans cet esprit que Women of the Future a organisé
+    une séance de sensibilisation interactive au Lycée Technique et Professionnel (LPT) d’Ambalavao,
+    dans le cadre de la campagne « 100 jours sans mariage d’enfants ».
+  </p>
+
+  <p>
+    L’activité a réuni 140 élèves et a été animée par 7 bénévoles de Women of the Future,
+    des membres de l’Association Jeunes Avenir de Madagascar, ainsi que le Responsable de la Maison des Jeunes
+    d’Ambalavao, avec la collaboration étroite des responsables de l’établissement.
+  </p>
+
+  <p>
+    La séance a permis aux jeunes d’échanger activement sur leur avenir et leurs droits,
+    de discuter des causes et conséquences du mariage précoce, et de proposer leurs propres
+    solutions pour contribuer à sa prévention.
+  </p>
+
+  <p>
+    À l’issue des échanges, les élèves ont exprimé leur compréhension des enjeux abordés
+    et ont affirmé leur engagement à se concentrer sur leurs objectifs et à poursuivre leurs études.
+  </p>
+
+  <p>
+    Women of the Future remercie les responsables du Lycée Technique et Professionnel d’Ambalavao,
+    le Chef CISCO, ainsi que l’ensemble des bénévoles et partenaires engagés qui rendent ces actions possibles.
+  </p>
+</article>
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">03 Février 2026 – CEG Ambohijafy, Ambalavao</div>
+
+  <img src="ceg1.jpg" alt="Séance de sensibilisation au CEG Ambohijafy – 03 février 2026">
+
+  <p>
+    Dans le cadre de la campagne « 100 jours sans mariage d’enfants », Women of the Future (WOF) a organisé
+    une séance de sensibilisation au Collège d’Enseignement Général (CEG) Ambohijafy – Ambalavao,
+    le 03 février 2026, marquant l’extension de ses activités dans la ville d’Ambalavao.
+  </p>
+
+  <p>
+    Cette activité a été menée par des bénévoles membres de WOF ainsi que par des bénévoles issus
+    de l’Association Jeunes Avenir de Madagascar – Ambalavao, avec la collaboration de la Maison des Jeunes
+    d’Ambalavao. Le représentant de la Maison des Jeunes, relevant du Ministère de la Jeunesse et des Sports,
+    a également participé à la séance.
+  </p>
+
+  <p>
+    La sensibilisation a concerné environ 1 700 élèves, de la 6e à la 3e, âgés en majorité de 11 à 16 ans.
+    Les échanges ont porté sur l’importance de poursuivre les études, de se concentrer sur leurs objectifs
+    et de comprendre les risques liés au mariage précoce.
+  </p>
+
+  <p>
+    À travers cette campagne, Women of the Future réaffirme son engagement en faveur de la protection
+    de l’enfance et du droit à l’éducation, convaincue que le développement durable passe par
+    l’investissement dans la jeunesse.
+  </p>
+
+  <p>
+    L’association adresse ses sincères remerciements au Chef CISCO d’Ambalavao, aux responsables du CEG
+    Ambohijafy, aux bénévoles mobilisés, à l’Association Jeunes Avenir de Madagascar, à la Maison des Jeunes
+    d’Ambalavao, ainsi qu’à l’ensemble des partenaires et autorités locales pour leur collaboration.
+  </p>
+
+  <p>
+    Les activités de sensibilisation se poursuivent dans les prochains jours à Ambalavao.
+  </p>
+</article>
+
+<article>
+  <h2>Action environnementale à la Réserve communautaire d’Anja</h2>
+  <div class="date">30 Janvier 2026 – Ambalavao, Haute Matsiatra</div>
+
+  <img src="anja1.jpg" alt="Action de plantation à la Réserve communautaire d’Anja – 30 janvier 2026">
+
+  <p>
+    Women of the Future a participé à une action de plantation d’arbres au sein de la Réserve communautaire d’Anja, à Ambalavao.
+  </p>
+
+  <p>
+    Cette initiative marque une étape importante dans l’engagement environnemental de l’association
+    et constitue la première action publique de WOF dans la région Haute-Mahatsiatra.
+  </p>
+
+  <p>
+    La protection de l’environnement est l’un des piliers fondamentaux de Women of the Future.
+    L’association considère que le développement durable ne peut exister sans la préservation des ressources naturelles,
+    la protection des écosystèmes et la promotion d’actions concrètes en faveur de la nature.
+  </p>
+
+  <p>
+    À travers cet activité, les bénévoles ont contribué activement à un geste simple mais essentiel
+    pour l’avenir : restaurer, protéger et transmettre un environnement sain aux générations futures.
+  </p>
+
+  <p>
+    Cette journée a également été un moment d’accueil et de mobilisation des bénévoles,
+    ainsi qu’un espace d’échange sur l’importance d’intégrer la dimension environnementale
+    dans toutes les actions de Women of the Future.
+  </p>
+
+  <p>
+    En s’engageant dans ce type d’initiative, l’association réaffirme que la protection de l’environnement
+    est au cœur de sa vision du développement durable et de son action communautaire.
+  </p>
+
+  <p>
+    Women of the Future remercie les partenaires et les organisateurs pour cette collaboration,
+    ainsi que les bénévoles pour leur engagement.
+  </p>
+</article>
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">28 Janvier 2026 – Mahajanga</div>
+
+   <img src="fanovozantsoa1.jpg" alt="Séance de sensibilisation au Centre FANOVOZANTSOA – Mahajanga">
+
+  <p>
+    Dans le cadre de la campagne « 100 jours sans mariage d’enfants », Women of the Future,
+    en collaboration avec l’association WaKai, a mené des actions de sensibilisation
+    au Centre d’accueil FANOVOZANTSOA à Mahajanga.
+  </p>
+
+  <p>
+    La séance a constitué un espace de parole et de prise de conscience, où les enfants ont été
+    informés de leurs droits et encouragés à construire leur avenir avec confiance et détermination.
+  </p>
+
+  <p>
+    Malgré les défis, les imprévus et les moyens limités, les équipes continuent d’avancer
+    avec engagement et responsabilité. Cette dynamique s’inscrit dans la conviction que
+    le développement de Mahajanga passe par la protection de l’enfance et l’accès à l’éducation.
+  </p>
+
+  <p>
+    À travers ces actions, Women of the Future affirme que le silence n’est pas une option
+    face aux enjeux qui concernent les enfants.
+  </p>
+
+  <p>
+    Women of the Future remercie l’association WaKai ainsi que l’ensemble des bénévoles
+    et partenaires pour leur mobilisation et leur engagement constant.
+  </p>
+</article>
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">CDEF Mangarivotra – Mahajanga</div>
+
+  <img src="cdef1.jpg" alt="Séance de sensibilisation à la CDEF Mangarivotra – Mahajanga">
+
+  <p>
+    Dans le cadre de la campagne « 100 jours sans mariage d’enfants », Women of the Future (WOF)
+    a mené une séance de sensibilisation à la CDEF Mangarivotra, dans l’après-midi d’hier.
+  </p>
+
+  <p>
+    La CDEF accueille des enfants en situation de vulnérabilité et œuvre quotidiennement pour leur protection
+    et leur accompagnement. Cette action visait à soutenir les équipes qui travaillent auprès des enfants,
+    afin de renforcer les efforts de prévention contre les risques d’abandon scolaire et de mariage précoce.
+  </p>
+
+  <p>
+    Au-delà de la sensibilisation, cette descente a également été un moment de visite de courtoisie
+    et d’échanges humains. Les bénévoles ont partagé avec sincérité leurs parcours personnels,
+    les difficultés rencontrées et les obstacles surmontés.
+  </p>
+
+  <p>
+    Ces témoignages, simples et authentiques, avaient pour objectif d’inspirer les enfants,
+    de leur rappeler qu’ils ne sont pas seuls et qu’il est possible de croire en ses rêves
+    et de persévérer malgré les épreuves.
+  </p>
+
+  <p>
+    Conformément aux actions prévues dans la campagne, l’association WaKai était présente
+    et engagée aux côtés de Women of the Future. Cette collaboration reflète une volonté commune
+    d’agir pour la protection et le développement des enfants à Mahajanga.
+  </p>
+
+  <p>
+    Women of the Future adresse ses remerciements au personnel de la CDEF pour l’accueil chaleureux,
+    ainsi qu’à l’ensemble des équipes mobilisées pour leur engagement et leur disponibilité.
+  </p>
+
+  <p>
+    Ensemble, continuons à protéger, prévenir et agir avec responsabilité.
+  </p>
+</article>
+
+
+<article>
+  <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
+  <div class="date">Mahajanga</div>
+
+  <img src="wakai1.jpg" alt="Activités de terrain à Mahajanga avec WaKai">
+
+  <p>
+    Dans le cadre de la campagne « 100 jours sans mariage d’enfants », Women of the Future poursuit
+    ses actions de sensibilisation à Mahajanga, cette fois en collaboration avec l’association WaKai.
+  </p>
+
+  <p>
+    Le lancement de cette collaboration a été marqué par des activités de terrain menées dans
+    deux établissements scolaires de la ville :
+  </p>
+
+  <p>
+    📍 EPP Fanantenana<br>
+    📍 EPP Tsaramandroso
+  </p>
+
+  <p>
+    À travers ce partenariat, WOF et WaKai unissent leurs forces autour d’un objectif commun :
+    contribuer au développement de Mahajanga en protégeant les droits des enfants,
+    en encourageant l’éducation et en prévenant les mariages précoces.
+  </p>
+
+  <p>
+    Cette initiative s’inscrit dans la continuité des actions menées dans le cadre de la campagne,
+    qui mobilise des organisations, des jeunes et des acteurs communautaires engagés
+    en faveur du bien-être des enfants.
+  </p>
+
+  <p>
+    La campagne repose sur l’engagement de jeunes bénévoles, y compris les membres de Women of the Future,
+    convaincus que le développement durable passe par la protection, l’éducation
+    et l’autonomisation des enfants et des jeunes.
+  </p>
+
+  <p>
+    Women of the Future remercie l’association WaKai pour cette collaboration
+    et l’ensemble des bénévoles mobilisés pour la réussite de ces actions communes.
+  </p>
+</article>
+
+
   <article>
     <h2>Campagne « 100 jours sans mariage d’enfants »</h2>
     <div class="date">Janvier 2026 – Mahajanga</div>
@@ -182,6 +579,32 @@
 <footer>
   <p>© Women of the Future – WOF</p>
 </footer>
+<script>
+function nextSlide(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const slides = slider.querySelectorAll('.slide');
 
+  let index = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+  slides[index].classList.remove('active');
+
+  index = (index + 1) % slides.length;
+
+  slides[index].classList.add('active');
+}
+
+function prevSlide(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const slides = slider.querySelectorAll('.slide');
+
+  let index = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+  slides[index].classList.remove('active');
+
+  index = (index - 1 + slides.length) % slides.length;
+
+  slides[index].classList.add('active');
+}
+</script>
 </body>
 </html>
