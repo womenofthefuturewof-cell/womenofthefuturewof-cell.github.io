@@ -1,280 +1,341 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Women of the Future – "Racines dans la terre, regard vers l’avenir"</title>
-  <style>
-    :root{
-      --green:#1f5f3b;
-      --ocre:#d18b2c;
-      --dark:#0f2f22;
-      --light:#f5f3ef;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Women of the Future – "Racines dans la terre, regard vers l’avenir"</title>
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: "Segoe UI", sans-serif;
-      background: var(--light);
-      color:#222;
-      line-height:1.6;
-    }
+<style>
+:root{
+  --green:#1E4D2B;
+  --emerald:#1f8a5f;
+  --ocre:#F2B705;
+  --terra:#A63D2E;
+  --dark:#0b2a1f;
+  --light:#f8f6f2;
+}
 
-    header{
-      background: linear-gradient(120deg,var(--green),var(--dark));
-      color:white;
-      padding:4rem 2rem;
-      position:relative;
-      overflow:hidden;
-    }
+*{margin:0;padding:0;box-sizing:border-box}
 
-    header::after{
-      content:"";
-      position:absolute;
-      width:300px;
-      height:300px;
-      background:var(--ocre);
-      border-radius:50%;
-      opacity:.15;
-      top:-80px;
-      right:-80px;
-    }
+body{
+  font-family:"Segoe UI", sans-serif;
+  background:var(--light);
+  color:#222;
+  line-height:1.6;
+}
 
-    nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:1rem;
-      margin-bottom:2rem;
-      font-weight:600;
-    }
+/* HEADER HERO */
+header{
+  background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url("hero.png");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:6rem 2rem;
+  text-align:center;
+  position:relative;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      opacity:.85;
-    }
-    nav a:hover{opacity:1}
+header::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:120px;
+  background:url("motif.png");
+  background-size:200px;
+  opacity:0.1;
+}
 
-    h1{
-      font-size:2.6rem;
-      margin-bottom:1rem;
-    }
+nav{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:2rem;
+  font-weight:600;
+}
 
-    .slogan{
-      font-size:1.2rem;
-      font-weight:600;
-      color:var(--ocre);
-      margin-bottom:1.5rem;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    section{
-      padding:4rem 2rem;
-      max-width:1100px;
-      margin:auto;
-    }
+nav a:hover{
+  color:var(--ocre);
+}
 
-    section h2{
-      color:var(--green);
-      margin-bottom:1rem;
-      font-size:2rem;
-    }
+h1{
+  font-size:3rem;
+  margin-bottom:1rem;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:1.5rem;
-      margin-top:2rem;
-    }
+.slogan{
+  font-size:1.3rem;
+  color:var(--ocre);
+  font-weight:bold;
+  margin-bottom:1.5rem;
+}
 
-    .card{
-      background:white;
-      padding:1.5rem;
-      border-radius:16px;
-      box-shadow:0 10px 25px rgba(0,0,0,.06);
-      transition:.3s;
-    }
+.btn{
+  display:inline-block;
+  margin-top:1rem;
+  padding:.8rem 1.5rem;
+  background:var(--ocre);
+  color:black;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
 
-    .card:hover{
-      transform:translateY(-6px);
-    }
+.btn:hover{
+  background:var(--terra);
+  color:white;
+}
 
-    .tag{
-      display:inline-block;
-      background:var(--ocre);
-      color:white;
-      padding:.3rem .7rem;
-      border-radius:20px;
-      font-size:.8rem;
-      margin-bottom:.6rem;
-    }
+/* SECTIONS */
+section{
+  padding:5rem 2rem;
+  max-width:1100px;
+  margin:auto;
+}
 
-    footer{
-      background:var(--dark);
-      color:white;
-      padding:3rem 2rem;
-      text-align:center;
-    }
+section h2{
+  color:var(--green);
+  margin-bottom:2rem;
+  font-size:2.2rem;
+}
 
-    footer a{
-      color:var(--ocre);
-      text-decoration:none;
-      font-weight:600;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+}
 
-    .accent{
-      color:var(--ocre);
-      font-weight:600;
-    }
-  </style>
+/* CARDS */
+.card{
+  background:white;
+  border-radius:20px;
+  padding:1.5rem;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:1rem;
+}
+
+.tag{
+  display:inline-block;
+  background:var(--terra);
+  color:white;
+  padding:.4rem .8rem;
+  border-radius:20px;
+  font-size:.8rem;
+  margin-bottom:.5rem;
+}
+
+/* DIVIDER MOTIF */
+.divider{
+  height:80px;
+  background:url("motif.png");
+  background-size:180px;
+  opacity:0.07;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:3rem 2rem;
+}
+
+footer a{
+  color:var(--ocre);
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-<header id="accueil">
-  <img src="logo.png" alt="logo Women Of the Future" style="width:250px; border-radius:50%;float:right;margin:40px 40px0 0;">
-  <nav>
-    <a href="#apropos">À propos</a>
-    <a href="#actions">Actions</a>
-    <a href="#rejoindre">Rejoindre WOF</a>
-    <a href="#partenaires">Partenaires</a>
-    <a href="#actualites">Actualités</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+<nav>
+<a href="#actualites">Actualités</a>
+<a href="#apropos">À propos</a>
+<a href="#actions">Actions</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <h1>WOMEN OF THE FUTURE (WOF)</h1>
-  <div class="slogan">Racines dans la terre, regard vers l’avenir</div>
-
-  <p>
-    Association féminine engagée pour un développement durable, inclusif
-    et porté par les femmes située dans la Région Boeny, Madagascar.
-  </p>
+<h1>WOMEN OF THE FUTURE</h1>
+<div class="slogan">"Racines dans la terre, regard vers l’avenir"</div>
+<p>Association féminine engagée pour la protection des droits des filles et des femmes, leur autonomisation et le développement durable .</p>
+<a href="#actualites" class="btn">Découvrir nos actions</a>
 </header>
 
+<section id="actualites">
+<h2>🔥 Nos dernières actions</h2>
+<div class="grid">
+
+<div class="card">
+<img src="sensibilisation.jpg" alt="">
+<span class="tag">09 Février 2026</span>
+<p><strong>326 jeunes disent NON au mariage d’enfants</strong></p>
+<p>Une mobilisation forte au Lycée Joël Sylvain pour défendre l’éducation.</p>
+</div>
+
+<div class="card">
+<img src="environnement.jpg" alt="">
+<span class="tag">25 Février 2026</span>
+<p><strong>WOF participe aux activités de reboisement.</strong></p>
+<p>Participation aux activités de reboisement dans la Réserve communautaire d'Anja.</p>
+</div>
+
+<div class="card">
+<img src="engagement.jpg" alt="">
+<span class="tag">Engagement</span>
+<p><strong>Des jeunes qui choisissent leur avenir</strong></p>
+<p>Leadership féminin, mobilisation communautaire et impact local.</p>
+</div>
+<div class="section-bouttons"> <a href="actualites.html">Découvrir toutes nos actualités </a> </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
 <section id="apropos">
-  <h2>Qui sommes-nous</h2>
+<h2>  Qui sommes-nous ?</h2>
+<p>
+Women of the Future (WOF) est une association de femmes malagasy engagées dans la protection des droits des filles et des femmes, le développement durable
+et la protection de l'environnement.
+</p>
+
+<!-- ========================= -->
+<!-- VISION • MISSION • OBJECTIFS • VALEURS -->
+<!-- ========================= -->
+
+<section id="identite">
+
+  <h2>🌍 Vision</h2>
   <p>
-    Women of the Future (WOF) est une association féminine engagée pour un
-    développement durable, inclusif et porté par les femmes.
+    Un Madagascar — et un monde — où les femmes et les filles connaissent leurs droits,
+    sont économiquement indépendantes, conscientes de leur valeur et pleinement engagées
+    dans le développement social, économique et environnemental durable de leurs communautés.
   </p>
+
+  <br>
+
+  <h2>🎯 Mission</h2>
   <p>
-    Elle agit principalement en milieu rural, tout en développant des actions
-    ciblées en milieu urbain, afin de toucher un public plus large et de renforcer son impact.
+    Promouvoir un développement rural durable porté par les femmes à travers la formation,
+    la sensibilisation, la mobilisation communautaire et le plaidoyer, afin de renforcer
+    l’autonomisation des femmes et des filles et leur participation active au développement local.
   </p>
+
+  <br>
+
+  <h2>📌 Objectifs</h2>
+  <ul>
+    <li> Sensibiliser les femmes et les filles à leurs droits et à leur valeur.</li>
+    <li> Renforcer leur autonomie sociale et économique.</li>
+    <li> Promouvoir l’entrepreneuriat durable en milieu rural.</li>
+    <li> Encourager des pratiques respectueuses de l’environnement.</li>
+    <li> Soutenir la participation des femmes au développement de leurs communautés.</li>
+    <li> Contribuer à un modèle de développement inclusif et durable.</li>
+  </ul>
+
+  <br>
+
+  <h2>💎 Nos Valeurs</h2>
 
   <div class="grid">
-    <div class="card">
-      <span class="tag">Mission</span>
-      <p>
-        Contribuer à un développement durable porté par les femmes à travers
-        le leadership féminin, l’autonomisation économique, la protection de
-        l’environnement, l’inclusion des femmes vulnérables et des actions
-        humanitaires.
-      </p>
+
+    <div class="card">⚖️ <strong>Égalité</strong><br>
+      Nous défendons l’égalité des droits et des chances pour toutes les femmes et filles.
     </div>
 
-    <div class="card">
-      <span class="tag">Vision</span>
-      <p>
-        Un avenir où les femmes participent pleinement aux décisions,
-        où les jeunes filles grandissent avec confiance et où le
-        développement respecte les générations futures.
-      </p>
+    <div class="card">🤝 <strong>Solidarité</strong><br>
+      Nous croyons en la force de l’action collective.
     </div>
 
-    <div class="card">
-      <span class="tag">Valeurs</span>
-      <p>
-        Autonomie – Engagement – Inclusion – Audace – Responsabilité.
-      </p>
+    <div class="card">🫶 <strong>Entraide</strong><br>
+      Nous encourageons le soutien mutuel et la coopération.
     </div>
+
+    <div class="card">❤️ <strong>Amour</strong><br>
+      La bienveillance et l’humanité guident nos actions.
+    </div>
+
+    <div class="card">🙏 <strong>Respect</strong><br>
+      Nous agissons dans le respect de la dignité humaine.
+    </div>
+
+    <div class="card">👭 <strong>Sororité</strong><br>
+      Nous valorisons l’unité et la solidarité entre femmes.
+    </div>
+
+    <div class="card">📚 <strong>Transmission</strong><br>
+      Nous partageons connaissances et expériences entre générations.
+    </div>
+
+    <div class="card">⚖️ <strong>Justice sociale</strong><br>
+      Nous œuvrons pour réduire les inégalités.
+    </div>
+
+    <div class="card">🌟 <strong>Bien commun</strong><br>
+      Nous plaçons l’intérêt collectif au cœur de nos actions.
+    </div>
+
   </div>
+
 </section>
+
+</section>
+
+<div class="divider"></div>
 
 <section id="actions">
-  <h2>Actions & Projets</h2>
-  <p>
-    Nos actions sont pensées pour être utiles, réalistes et durables,
-    en réponse aux réalités locales.
-  </p>
-
-  <div class="grid">
-    <div class="card">Leadership féminin & développement personnel</div>
-    <div class="card">Entrepreneuriat féminin</div>
-    <div class="card">Gestion de projets communautaires</div>
-    <div class="card">Mobilisation communautaire</div>
-    <div class="card">Protection de l’environnement</div>
-    <div class="card">Actions humanitaires ciblées</div>
-  </div>
+<h2>Nos domaines d’action</h2>
+<div class="grid">
+<div class="card"> +.Leadership féminin</div>
+<div class="card">Entrepreneuriat féminin</div>
+<div class="card">Protection de l’environnement</div>
+<div class="card">Mobilisation communautaire</div>
+<div class="card">Éducation et jeunesse</div>
+<div class="card">Actions humanitaires</div>
+</div>
 </section>
 
-<section id="rejoindre">
-  <h2>Rejoindre Women of the Future</h2>
-
-  <div class="grid">
-    <div class="card">
-      <span class="tag">Membres actifs</span>
-      <p>Femmes de 18 ans et plus, engagées volontairement.</p>
-    </div>
-
-    <div class="card">
-      <span class="tag">Membres juniors</span>
-      <p>
-        Jeunes filles de 12 à 17 ans, participation encadrée
-        dans un cadre sûr et bienveillant.
-      </p>
-    </div>
-
-    <div class="card">
-      <span class="tag">Partenaires solidaires</span>
-      <p>Personnes ou structures souhaitant soutenir les actions.</p>
-    </div>
-
-    <div class="card">
-      <span class="tag">Membres d’honneur</span>
-      <p>Personnes souhaitant valoriser et soutenir WOF.</p>
-    </div>
-  </div>
-</section>
-
-<section id="partenaires">
-  <h2>Partenaires & Bailleurs</h2>
-  <p>
-    Women of the Future est ouverte aux collaborations avec des
-    partenaires partageant les mêmes valeurs et souhaitant avoir
-    un impact réel sur le terrain.
-  </p>
-  <p class="accent">
-    📧 Contact partenaires uniquement :  
-    womenofthefuturewof@gmail.com
-  </p>
-</section>
-
-<section id="actualites">
-  <h2>Actualités</h2>
-  <p>
-  
-    Découvrer nos dernières actualtés et nos actions :
-  </p> <div class="section-bouttons"> <a href="actualites.html">Actualités </a> </div>
-  </p> <div class="section-bouttons"> <a href="actions.html" class="btn"> Actions</a> </div>
-  </p> <div class="section-bouttons"> <a href="projetsetvision.html" class="btn"> Projets  et Vision</a> </div>
-
-  </p>
-</section>
+<div class="divider"></div>
 
 <section id="contact">
-  <h2>Nous contacter</h2>
-  <p>
-    📧 womenofthefuturewof@gmail.com<br/>
-    📩 Message privé sur notre page Facebook
-  </p>
+<h2>Nous contacter</h2>
+<p>
+📧 womenofthefuturewof@gmail.com<br>
+📍 Mahajanga, Boeny, Madagascar
+📍 Ambalavao, Haute-Mahatsiatra, Madagascar
+</p>
 </section>
 
 <footer>
-<p>Mahajanga , Boeny, Madagascar</p>
-  <p>
-    © Women of the Future – WOF  
-    <br/>"Racines dans la terre, regard vers l’avenir"
-  </p>
+<img src="logo.png" alt="logo Women Of the Future" style="width: 85px;px; border-radius:100%;margin:40px 40px0 0;">
+
+<p>© Women of the Future – WOF</p>
+<p>"Racines dans la terre, regard vers l’avenir"</p>
 </footer>
 
 </body>
